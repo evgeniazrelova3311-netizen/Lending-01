@@ -1,58 +1,146 @@
+/* Сброс и базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Шапка */
 .header {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
-  font-size: 28px;
-  font-weight: 700;
-  color: #1e88e5;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e88e5;
 }
 
 .nav {
-  display: flex;
-  gap: 40px;
+    display: flex;
+    gap: 40px;
 }
 
 .nav a {
-  position: relative;
-  text-decoration: none;
-  color: #000;
-  font-size: 16px;
-  font-weight: 500;
-  padding-bottom: 6px;
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 6px;
 }
 
 /* Подчёркивание при hover */
 .nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 2px;
-  background: #1e88e5;
-  transition: width 0.3s ease;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #1e88e5;
+    transition: width 0.3s ease;
 }
 
 .nav a:hover::after {
-  width: 100%;
+    width: 100%;
 }
 
 /* Активный пункт */
 .nav a.active::after {
-  width: 100%;
+    width: 100%;
 }
 
 .icons {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+/* Hero-блок */
+.hero {
+    min-height: calc(100vh - 80px); /* чтобы учесть высоту шапки, при желании подкорректируй */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 8vw, 96px);
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 24px;
+}
+
+.hero p {
+    font-size: clamp(18px, 2.5vw, 28px);
+    color: #4b5563;
+    margin-bottom: 60px;
+}
+
+/* Кнопка */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px 60px;
+    font-size: 28px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #0f5f8f;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #0c4c72;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(15, 95, 143, 0.4);
+}
+
+/* Блок с мокапом */
+.mockup-full {
+    text-align: center;
+    margin: 40px 0;
+    width: 100%;
+}
+
+.mockup-full img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .cta-button {
+        font-size: 20px;
+        padding: 20px 40px;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
 }
