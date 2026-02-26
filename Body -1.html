@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Республика</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000;
+            color: #e5e7eb;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 96px);
+            font-weight: 500;
+            color: #1f2937;
+            margin-bottom: 24px;
+        }
+
+        .hero p {
+            font-size: clamp(18px, 2.5vw, 28px);
+            color: #9ca3af;
+            margin-bottom: 60px;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 28px 60px;
+            font-size: 28px;
+            font-weight: 500;
+            color: #ffffff;
+            background-color: #0f5f8f;
+            border: none;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background-color: #0c4c72;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(15, 95, 143, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .cta-button {
+                font-size: 20px;
+                padding: 20px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>Республика</h1>
+        <p>Все бизнес-процессы в одном умном пространстве</p>
+        <a href="#contact" class="cta-button">Связаться с нами</a>
+    </section>
+</body>
+</html>
