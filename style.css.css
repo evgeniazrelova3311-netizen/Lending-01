@@ -1,0 +1,58 @@
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e88e5;
+}
+
+.nav {
+  display: flex;
+  gap: 40px;
+}
+
+.nav a {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 6px;
+}
+
+/* Подчёркивание при hover */
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #1e88e5;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* Активный пункт */
+.nav a.active::after {
+  width: 100%;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+}
